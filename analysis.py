@@ -70,6 +70,7 @@ class CardEntry:
             print(f" - {result}")
 
 
+
 def parse_card_data(combos, card_data:dict[str, CardEntry] = None):
     if card_data is None:
         card_data = dict[str, CardEntry]()
@@ -77,8 +78,11 @@ def parse_card_data(combos, card_data:dict[str, CardEntry] = None):
     for i, combo in enumerate(combos):
         for card in combo["required_cards"]:
             if card not in card_data.keys():
-                is_missing = card in combo["missing_cards"]
-                card_data[card] = CardEntry(card, is_missing)
+                card_data[card] = CardEntry(card, False)
+            card_data[card].add_combo_info(i, combo)
+        for card in combo["missing_cards"]:
+            if card not in card_data.keys():
+                card_data[card] = CardEntry(card, True)
             card_data[card].add_combo_info(i, combo)
 
     return card_data
@@ -106,7 +110,7 @@ def main():
     cards = list(combo_data.values())
     cards = sorted(cards, key=lambda card: len(card.potential_combo_ids), reverse=True)
     cards = sorted(cards, key=lambda card: len(card.current_combo_ids), reverse=False)
-    cards = [card for card in cards if card.is_missing == False]
+    cards = [card for card in cards if card.is_missing == True]
 
     # Display Results
     print_statistics(cards)
