@@ -1,10 +1,2 @@
 /.venv
-/app.html
-/card_data.json
-/combo_data.json
-/current_summary.txt
-/decklist.txt
-/output.html
-/summary.txt
-/test.html
-/webpage.html
+/*Artifacts/

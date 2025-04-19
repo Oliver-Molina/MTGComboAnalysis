@@ -1,0 +1,88 @@
+1 Liberator, Urza's Battlethopter (BRO) 237
+1 Altar of the Brood (KTK) 216
+1 Amonkhet Raceway (DFT) 248
+1 Animation Module (KLD) 194
+1 Arcbound Crusher (HOP) 105
+1 Arcbound Ravager (PPRO) 2019 *F*
+1 Ashnod's Altar (6ED) 274
+1 Avishkar Raceway (DFT) 249
+1 Basalt Monolith (LTC) 274
+1 Battered Golem (5DN) 106
+1 Blade of the Bloodchief (LCC) 300
+1 Blast Zone (M3C) 322
+1 Blasting Station (5DN) 107
+1 Cathedral of War (M13) 221
+1 Cathodion (2XM) 237
+1 Cauldron of Souls (C16) 246
+1 Clock of Omens (M13) 202
+1 Cogwork Assembler (2XM) 242
+1 Conduit Pylons (OTJ) 254
+1 Coveted Jewel (BLC) 268
+1 Crackdown Construct (AER) 148
+1 Darksteel Citadel (C16) 288
+1 Dread Statuary (CN2) 217
+1 Dreamstone Hedron (ARC) 105
+1 Dross Scorpion (MRD) 164
+1 Empowered Autogenerator (PLST) C19-54
+1 Everflowing Chalice (LTC) 278
+1 Extruder (MH2) 296
+1 Forsaken Monument (M3C) 293
+1 Gallifrey Council Chamber (WHO) 188
+1 Gilded Lotus (BLC) 271
+1 Grinding Station (MB2) 223
+1 Guildless Commons (PLST) CMR-351
+1 Hall of Tagsin (BRO) 263
+1 Heartstone (PLST) H09-26
+1 Hedron Archive (C19) 214
+1 Hexavus (BRC) 14
+1 Hidden Grotto (BLB) 254
+1 Krark-Clan Ironworks (MB2) 224
+1 Lightning Greaves (CMM) 398
+1 Muraganda Raceway (PDFT) 257p
+1 Myr Moonvessel (DST) 133
+1 Myr Turbine (MBS) 117
+1 Myr Welder (MBS) 118
+1 Mystic Forge (PIP) 236
+1 Nephalia Academy (EMN) 205
+1 Nesting Grounds (PIP) 276
+1 Palladium Myr (SOM) 190
+1 Pentavus (C14) 261
+1 Prototype Portal (SOM) 195
+1 Reliquary Tower (TDC) 386
+1 Retrofitter Foundry (DRC) 136
+1 Rings of Brighthearth (CMR) 698
+1 Rogue's Passage (LCC) 349
+1 Ruins of Oran-Rief (M3C) 370
+1 Sculpting Steel (BRR) 50
+1 Sea Gate Wreckage (OGW) 177
+1 Shrine of the Forsaken Gods (MKC) 292
+1 Sisay's Ring (CMR) 340
+1 Sol Ring (TDC) 106
+1 Staff of Domination (5DN) 156
+1 Stridehangar Automaton (DRC) 35
+1 Su-Chi Cave Guard (BRO) 249
+1 Syr Ginger, the Meal Ender (PWOE) 252p
+1 Tarrian's Soulcleaver (PLCI) 264p
+1 Tatterkite (SHM) 264
+1 Thopter Squadron (EXO) 140
+1 Thran Dynamo (CMM) 415
+1 Throne of Geth (SOM) 211
+1 Tomb of the Spirit Dragon (M3C) 397
+1 Traxos, Scourge of Kroog (BRC) 170
+1 Treasure Vault (DRC) 180
+1 Triskelavus (CMD) 263
+1 Triskelion (MRD) 269
+1 Tyrite Sanctum (DMC) 240
+1 Ugin's Nexus (KTK) 227
+1 Ur-Golem's Eye (DST) 155
+1 Urza's Cave (MH3) 234
+1 Urza's Factory (TSR) 288
+1 Urza's Mine (J22) 829
+1 Urza's Power Plant (CHR) 115a
+1 Urza's Tower (J22) 831
+1 Voltaic Construct (DST) 156
+1 Voltaic Key (DDE) 17
+1 Walking Ballista (J22) 806
+5 Wastes (OGW) 184a
+1 Workhorse (EXO) 142
+1 Worn Powerstone (SCD) 288

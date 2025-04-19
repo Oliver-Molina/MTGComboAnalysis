@@ -2,11 +2,18 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
+from os import path
 
-
-decklist_filename = "decklist.txt"
+# External URLs
 url = "https://combo-finder.com/"
-output_filename = "webpage.html"
+
+# User Inputted Files
+user_directory = path.join("..", "UserInputtedFiles")
+decklist_filename = path.join(user_directory, "decklist.txt")
+
+# Output Files
+output_directory = path.join("..", "WebScraperArtifacts")
+webpage_copy_filepath = path.join(output_directory, "webpage.html")
 
 # Read decklist file
 try:
@@ -36,10 +43,10 @@ try:
     print("Waiting for server response.")
     time.sleep(7)
 
-    print(f"Saving webpage response to {output_filename}.")
+    print(f"Saving webpage response to {webpage_copy_filepath}.")
     html = driver.page_source
     soup = BeautifulSoup(html, 'html.parser')
-    with open(output_filename, "w", encoding="utf-8") as f:
+    with open(webpage_copy_filepath, "w", encoding="utf-8") as f:
         f.write(html)
 
 finally:

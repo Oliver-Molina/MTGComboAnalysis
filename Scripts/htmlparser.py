@@ -1,11 +1,17 @@
 from bs4 import BeautifulSoup
 import re
 import json
+from os import path 
 
-html_filename = "webpage.html"
-combo_data_filename = "combo_data.json"
-card_data_filename = "card_data.json"
 
+# System Input Files
+input_directory = path.join("..", "WebScraperArtifacts")
+html_filepath = path.join(input_directory, "webpage.html")
+
+# Output Files
+output_directory = path.join("..", "ComboParserArtifacts")
+combo_data_filepath = path.join(output_directory, "combo_data.json")
+card_data_filepath = path.join(output_directory, "card_data.json")
 
 def clean_li(li_tag):
     text = li_tag.get_text(separator=' ', strip=True)
@@ -15,7 +21,7 @@ def clean_li(li_tag):
 
 # Step 1: Load the HTML file
 html_content = ""
-with open(html_filename, 'r', encoding='utf-8') as f:
+with open(html_filepath, 'r', encoding='utf-8') as f:
     html_content = f.read()
 
 soup = BeautifulSoup(html_content, 'html.parser')
@@ -24,9 +30,7 @@ soup = BeautifulSoup(html_content, 'html.parser')
 app_div = soup.find('div', {'id': 'app'})
 
 # Step 3: Extract combo-details sections
-combo_details = dict()
-combo_details["current"] = []
-combo_details["potential"] = []
+combo_details = []
 card_data = dict()
 
 for combo in app_div.find_all('details'):
@@ -64,7 +68,7 @@ for combo in app_div.find_all('details'):
         prerequisites = [clean_li(li) for li in ul_tags[1].find_all('li')]
         steps = [clean_li(li) for li in ul_tags[2].find_all('li')]
 
-        combo_details[category].append({
+        combo_details.append({
             'colors': colors,
             'required_cards': required_cards,
             'missing_cards': missing_cards,
@@ -74,8 +78,8 @@ for combo in app_div.find_all('details'):
         })
 
 # Step 4: Output or save the data
-with open(combo_data_filename, 'w', encoding="utf-8") as f:
+with open(combo_data_filepath, 'w', encoding="utf-8") as f:
     f.write(json.dumps(combo_details, indent=2))
 
-with open(card_data_filename, 'w', encoding="utf-8") as f:
+with open(card_data_filepath, 'w', encoding="utf-8") as f:
     f.write(json.dumps(card_data, indent=2))

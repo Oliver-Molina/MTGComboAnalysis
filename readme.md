@@ -16,18 +16,19 @@ This project takes results from [EDH Decklist Combo Finder](https://combo-finder
 * selenium >= 4.31.0
 
 ### Executing program
-
-* Copy your decklist from any website such as [Moxfield](https://moxfield.com/) and save it to decklist.txt
-* Run webscraper.py
+* Navigate to the [UserInputtedFiles](UserInputtedFiles) directory and copy your decklist from any website such as [Moxfield](https://moxfield.com/) to [decklist.txt](UserInputtedFiles/decklist.txt)
+* You can also add the names of any cards you wish to ignore to file [antidecklist.txt](UserInputtedFiles/antidecklist.txt)
+* Navigate to the [Scripts](Scripts) directory
+* Run [webscraper.py](Scripts/webscraper.py)
 ```
 python webscraper.py
 ```
-* Parse the webpage response using htmlparser.py
+* Parse the webpage response using [htmlparser.py](Scripts/htmlparser.py)
 ```
 python htmlparser.py
 ```
-* Edit analysis.py if you wish to apply custom sorting conditions
-* Analyze the results using analysis.py saving results if you please.
+* Edit [analysis.py](Scripts/analysis.py) if you wish to apply custom sorting conditions
+* Run [analysis.py](Scripts/analysis.py) and view the results.
 ```
 python analysis.py > summary.txt
 ```
