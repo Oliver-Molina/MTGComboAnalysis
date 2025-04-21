@@ -24,7 +24,9 @@ def load_data(filepath):
 def prepare_title(card):
      title = "Name: " + str(card["name"])
      title += "\nis_missing: " + str(card["is_missing"])
-     title += "\ncombo_count: " + str(len(card["current_combo_ids"]))
+     title += "\ncurrent_combos: " + str(len(card["current_combo_ids"]))
+     title += "\ncombos_missing_this_card: " + str(len(card["combos_missing_this_card_ids"]))
+     title += "\ncombos_missing_another_card: " + str(len(card["combos_missing_another_card_ids"]))
      title += "\naverage_cards_per_current_combo: " + "{:.2f}".format(card["average_cards_per_current_combo"])
      title += "\naverage_cards_per_all_combo: " + "{:.2f}".format(card["average_cards_per_all_combo"])
      return title
@@ -36,7 +38,7 @@ def prepeare_mass(card, max_combos):
     return mass
 
 def main():
-    combo_net = Network()
+    combo_net = Network(height="100vh", width="100%")
     combo_net.barnes_hut()
 
     try:
@@ -62,9 +64,13 @@ def main():
     for i, card in enumerate(cardnames):
         for adjacency in  adjaceny_list[card]:
             adj_i = cardnames.index(adjacency)
+            
+            color = "#02baf7"
+            if card_data[card]["missing"] == True or card_data[adjacency]["missing"] == True:
+                color = "grey"
+            
             if adj_i != -1:
-                combo_net.add_edge(i, adj_i) 
-                # Apply effect weighting here
+                combo_net.add_edge(i, adj_i, color=color) 
 
     combo_net.show(combo_vis_filepath, notebook=False)
 

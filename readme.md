@@ -7,6 +7,11 @@ MTG Combo Analysis is a project made to support EDH deckbuidling.
 
 This project takes results from [EDH Decklist Combo Finder](https://combo-finder.com/) and analyzes the output to display useful summaries and statistics.
 
+### Visualization 
+Combo results are visualized using a barnes hut network diagram with parameters listed below.
+* __Node Mass:__ Cards with higher combo potential are found more central within the network.
+*  __Edge Colour:__ Current combos will are displayed with blue connections and potential combos with grey.
+
 ## Getting Started
 
 ### Dependencies
@@ -14,6 +19,7 @@ This project takes results from [EDH Decklist Combo Finder](https://combo-finder
 * Python >= 3.10
 * beautifulsoup4 >= 4.13.0
 * selenium >= 4.31.0
+* pyvis >= 0.3.2
 
 ### Executing program
 #### Quick Instructions

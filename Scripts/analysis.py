@@ -178,7 +178,7 @@ def get_combos_by_effect(combos):
 def generate_adjacency_list(combos):
     adjacency_list = dict()
     for combo in combos:
-        required_cards = combo["required_cards"]
+        required_cards = combo["required_cards"] + combo["missing_cards"]
         for required_card in required_cards:
             if adjacency_list.get(required_card) is None:
                 adjacency_list[required_card] = []
@@ -229,10 +229,10 @@ def main():
         f.write(json.dumps(card_summary_dict, indent=2))
 
     with open(combos_by_effect_filepath, 'w') as f:
-        combos_by_effect = get_combos_by_effect(current_combos)
+        combos_by_effect = get_combos_by_effect(combos)
         f.write(json.dumps(combos_by_effect, indent=2))
 
-    adj = generate_adjacency_list(current_combos)
+    adj = generate_adjacency_list(combos)
 
     with open(adjacency_list_filepath, 'w') as f:
         f.write(json.dumps(adj, indent=2))
