@@ -1,4 +1,5 @@
 1 Liberator, Urza's Battlethopter (BRO) 237
+1 Aetherflux Reservoir (KLD) 192
 1 Altar of the Brood (KTK) 216
 1 Amonkhet Raceway (DFT) 248
 1 Animation Module (KLD) 194
@@ -18,7 +19,6 @@
 1 Cogwork Assembler (2XM) 242
 1 Conduit Pylons (OTJ) 254
 1 Coveted Jewel (BLC) 268
-1 Crackdown Construct (AER) 148
 1 Darksteel Citadel (C16) 288
 1 Dread Statuary (CN2) 217
 1 Dreamstone Hedron (ARC) 105
@@ -36,17 +36,19 @@
 1 Hedron Archive (C19) 214
 1 Hexavus (BRC) 14
 1 Hidden Grotto (BLB) 254
+1 Karn, the Great Creator (MB2) 3
 1 Krark-Clan Ironworks (MB2) 224
-1 Lightning Greaves (CMM) 398
+1 Kuldotha Forgemaster (SOM) 169
 1 Muraganda Raceway (PDFT) 257p
+1 Myr Galvanizer (SOM) 181
 1 Myr Moonvessel (DST) 133
 1 Myr Turbine (MBS) 117
-1 Myr Welder (MBS) 118
 1 Mystic Forge (PIP) 236
 1 Nephalia Academy (EMN) 205
 1 Nesting Grounds (PIP) 276
 1 Palladium Myr (SOM) 190
 1 Pentavus (C14) 261
+1 Phyrexian Triniform (CMM) 969
 1 Prototype Portal (SOM) 195
 1 Reliquary Tower (TDC) 386
 1 Retrofitter Foundry (DRC) 136
@@ -80,7 +82,6 @@
 1 Urza's Mine (J22) 829
 1 Urza's Power Plant (CHR) 115a
 1 Urza's Tower (J22) 831
-1 Voltaic Construct (DST) 156
 1 Voltaic Key (DDE) 17
 1 Walking Ballista (J22) 806
 5 Wastes (OGW) 184a

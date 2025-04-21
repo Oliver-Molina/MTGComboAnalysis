@@ -1,2 +1,4 @@
 /.venv
 /*Artifacts/
+/Scripts/lib*
+/Scripts/combovis.html

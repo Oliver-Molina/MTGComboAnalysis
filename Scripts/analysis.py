@@ -22,8 +22,8 @@ card_data_filepath = path.join(input_directory, "card_data.json")
 # Output files
 output_directory = path.join("..", "AnalysisArtifacts")
 adjacency_list_filepath = path.join(output_directory, "adjacencylist.json")
-combos_by_effect_filepath = path.join(output_directory, "combos_by_effect.txt")
-card_summaries_filename = path.join(output_directory, "card_summaries.txt")
+combos_by_effect_filepath = path.join(output_directory, "combos_by_effect.json")
+card_summaries_filepath = path.join(output_directory, "card_summaries.json")
 
 class CardEntry:
     def __init__(self, name, is_missing):
@@ -159,11 +159,11 @@ def remove_undesired_combos(combos, desired_colours, antidecklist):
     return [combo for combo in combos if combo_is_desired(combo, antidecklist, desired_colours)]
 
 
-def print_combos_by_effect(combos, print_func=print):
+def get_combos_by_effect(combos):
     combos_by_result = dict()
 
     for combo in combos:
-        summary = ", ".join(combo["required_cards"] + combo["missing_cards"]).strip()
+        summary = combo["required_cards"] + combo["missing_cards"]
         for result in combo["results"]:    
             if combos_by_result.get(result) is None:
                 combos_by_result[result] = []
@@ -173,10 +173,7 @@ def print_combos_by_effect(combos, print_func=print):
             if result_combos.count(result) == 0:
                 result_combos.append(summary)
 
-    for result in combos_by_result.keys():
-        print_func(f"{result}:")
-        for combo in combos_by_result[result]:
-            print_func(combo)
+    return combos_by_result
 
 def generate_adjacency_list(combos):
     adjacency_list = dict()
@@ -191,6 +188,8 @@ def generate_adjacency_list(combos):
     return adjacency_list
 
 def main():
+    print("Running analysis on combos.")
+
     # Load combos
     with open(combos_filepath, "r") as f:
         combos_text = f.read()
@@ -218,23 +217,29 @@ def main():
     cards = sorted(cards, key=lambda card: len(card.current_combo_ids), reverse=True)
 
     # Save Results
+
+    print(f"Saving results to {card_summaries_filepath}, {combos_by_effect_filepath}, and {adjacency_list_filepath}.")
+
     current_combos = [combo for combo in combos if len(combo["missing_cards"]) == 0]
 
-    with open(card_summaries_filename, 'w') as f:
-        print_func = partial(print, file=f)
-        print_statistics(cards, print_func=print_func)
+    with open(card_summaries_filepath, 'w') as f:
+        card_summary_dict = dict()
+        for card in cards:
+            card_summary_dict[card.name] = card.__dict__
+        f.write(json.dumps(card_summary_dict, indent=2))
 
     with open(combos_by_effect_filepath, 'w') as f:
-        print_func = partial(print, file=f)
-        print_combos_by_effect(current_combos, print_func=print_func)
+        combos_by_effect = get_combos_by_effect(current_combos)
+        f.write(json.dumps(combos_by_effect, indent=2))
 
     adj = generate_adjacency_list(current_combos)
 
     with open(adjacency_list_filepath, 'w') as f:
         f.write(json.dumps(adj, indent=2))
 
-
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    rtn = main()
+    exit(rtn)
