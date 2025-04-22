@@ -181,9 +181,14 @@ def generate_adjacency_list(combos):
         required_cards = combo["required_cards"] + combo["missing_cards"]
         for required_card in required_cards:
             if adjacency_list.get(required_card) is None:
-                adjacency_list[required_card] = []
-            missing_cards = [card for card in required_cards if card not in adjacency_list[required_card] and card != required_card]
-            adjacency_list[required_card] = adjacency_list[required_card] + missing_cards
+                adjacency_list[required_card] = dict()
+            
+            missing_cards = [card for card in required_cards if card != required_card]
+            for missing_card in missing_cards:
+                if adjacency_list[required_card].get(missing_card) is None:
+                    adjacency_list[required_card][missing_card] = 1
+                else:
+                    adjacency_list[required_card][missing_card] += 1
 
     return adjacency_list
 
@@ -220,7 +225,7 @@ def main():
 
     print(f"Saving results to {card_summaries_filepath}, {combos_by_effect_filepath}, and {adjacency_list_filepath}.")
 
-    current_combos = [combo for combo in combos if len(combo["missing_cards"]) == 0]
+    # combos = [combo for combo in combos if len(combo["missing_cards"]) == 0]
 
     with open(card_summaries_filepath, 'w') as f:
         card_summary_dict = dict()

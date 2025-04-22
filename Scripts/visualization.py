@@ -38,7 +38,7 @@ def prepeare_mass(card, max_combos):
     return mass
 
 def main():
-    combo_net = Network(height="100vh", width="100%")
+    combo_net = Network(height="100vh", width="100%", bgcolor="#222222", font_color="white")
     combo_net.barnes_hut()
 
     try:
@@ -59,18 +59,20 @@ def main():
         label=card["name"]
         image=card_data[label]["src"]
         mass = prepeare_mass(card, max_combos)
-        combo_net.add_node(n_id=i, title=title, shape="image", image=image, size=100, mass=mass)
-
+        combo_net.add_node(n_id=i, title=title, shape="image", image=image, size=100, mass=mass, color="#222222")
+    
     for i, card in enumerate(cardnames):
-        for adjacency in  adjaceny_list[card]:
+        for adjacency in  adjaceny_list[card].keys():
             adj_i = cardnames.index(adjacency)
             
             color = "#02baf7"
             if card_data[card]["missing"] == True or card_data[adjacency]["missing"] == True:
                 color = "grey"
+
+            weight = adjaceny_list[card][adjacency]
             
             if adj_i != -1:
-                combo_net.add_edge(i, adj_i, color=color) 
+                combo_net.add_edge(i, adj_i, color=color, value=weight) 
 
     combo_net.show(combo_vis_filepath, notebook=False)
 
