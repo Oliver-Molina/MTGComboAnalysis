@@ -7,12 +7,13 @@
 # and the average number of cards in potential combos
 
 import json
-from os import path
+from os import path, makedirs
 from functools import partial
 
 # User Inputted Files
 user_directory = path.join("..", "UserInputtedFiles")
 antidecklist_filepath = path.join(user_directory, "antidecklist.txt")
+desiredColours_filepath = path.join(user_directory, "desiredColours.txt")
 
 # System Input Files
 input_directory = path.join("..", "ComboParserArtifacts")
@@ -146,8 +147,12 @@ def print_card_combos(card:CardEntry, combos, print_func=print):
         print_card_combo(combo, print_func=print_func)
 
 def combo_is_desired(combo, antidecklist, desired_colours):
-    if combo["colors"] != desired_colours:
-        return False
+    actual_colours = str(combo["colors"]).split(",")    
+
+    for colour in actual_colours:
+        if colour not in desired_colours:
+            return False
+
     if any(card in combo["required_cards"] for card in antidecklist):
         return False
     if any(card in combo["missing_cards"] for card in antidecklist):
@@ -157,7 +162,6 @@ def combo_is_desired(combo, antidecklist, desired_colours):
 
 def remove_undesired_combos(combos, desired_colours, antidecklist):
     return [combo for combo in combos if combo_is_desired(combo, antidecklist, desired_colours)]
-
 
 def get_combos_by_effect(combos):
     combos_by_result = dict()
@@ -193,6 +197,16 @@ def generate_adjacency_list(combos):
     return adjacency_list
 
 def main():
+    # Create directories
+    if not path.exists(user_directory):
+        makedirs(user_directory)
+
+    if not path.exists(input_directory):
+        makedirs(input_directory)
+
+    if not path.exists(output_directory):
+        makedirs(output_directory)
+
     print("Running analysis on combos.")
 
     # Load combos
@@ -207,9 +221,29 @@ def main():
         with open(antidecklist_filepath, "r") as f:
             antidecklist = f.read().splitlines()
     except FileNotFoundError as e:
-        pass
+        print(f"No file found at {antidecklist_filepath}, add any undesired cards to this list.")
 
-    desired_colours = "c"
+
+    desired_colours = list()
+
+    colour_name_map = {"white": "w","blue": "u", "black": "b", "red": "r", "green": "g", "colourless": "c", "colorless": "c"}
+    colour_name_full = list(colour_name_map.keys())
+    colour_name_short = list(colour_name_map.values())
+
+    try:
+        with open(desiredColours_filepath, "r") as f:
+            colours = [c.strip() for c in f.read().split(",")]
+            for colour in colours:
+                if colour in colour_name_full:
+                    desired_colours.append(colour_name_map.get(colour))
+                elif colour in colour_name_short:
+                    desired_colours.append(colour)
+    except FileNotFoundError as e:
+        print(f"No file found at {desiredColours_filepath}, please enter desired combo colours in file.")
+        desired_colours = colour_name_short
+
+    print(f"Using only combos with colours {desired_colours}.")
+
     combos = remove_undesired_combos(combos, desired_colours, antidecklist)
 
     # Analyze combos for statistics

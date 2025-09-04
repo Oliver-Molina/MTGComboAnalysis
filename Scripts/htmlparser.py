@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import re
 import json
-from os import path 
+from os import path, makedirs
 
 
 # System Input Files
@@ -21,6 +21,13 @@ def clean_li(li_tag):
 
 
 def main():
+    # Create directories
+    if not path.exists(input_directory):
+        makedirs(input_directory)
+
+    if not path.exists(output_directory):
+        makedirs(output_directory)
+    
     print("Parsing html webpage for combo data.")
 
     # Step 1: Load the HTML file

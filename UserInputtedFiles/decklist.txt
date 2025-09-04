@@ -1,89 +1,96 @@
-1 Liberator, Urza's Battlethopter (BRO) 237
-1 Aetherflux Reservoir (KLD) 192
-1 Altar of the Brood (KTK) 216
-1 Amonkhet Raceway (DFT) 248
-1 Animation Module (KLD) 194
-1 Arcbound Crusher (HOP) 105
-1 Arcbound Ravager (PPRO) 2019 *F*
-1 Ashnod's Altar (6ED) 274
-1 Avishkar Raceway (DFT) 249
-1 Basalt Monolith (LTC) 274
-1 Battered Golem (5DN) 106
-1 Blade of the Bloodchief (LCC) 300
-1 Blast Zone (M3C) 322
-1 Blasting Station (5DN) 107
+1 The Capitoline Triad (ACR) 172 *E*
+1 Adaptive Omnitool (DRC) 32
+1 All Is Dust (M3C) 152
+1 Altar of Dementia (MH1) 218
+1 Amonkhet Raceway (DFT) 248 *F*
+1 Ancient Stone Idol (C18) 53
+1 Argentum Masticore (ONE) 222
+1 Ashnod's Altar (CHR) 92
+1 Avishkar Raceway (DFT) 249 *F*
+1 Blast Zone (CMM) 987
+1 Blinkmoth Urn (C16) 244
+1 Burnished Hart (CLB) 303
+1 Canoptek Spyder (40K) 151
 1 Cathedral of War (M13) 221
-1 Cathodion (2XM) 237
-1 Cauldron of Souls (C16) 246
-1 Clock of Omens (M13) 202
+1 Cloud Key (TSR) 265
+1 Codex Shredder (CMR) 304
 1 Cogwork Assembler (2XM) 242
-1 Conduit Pylons (OTJ) 254
-1 Coveted Jewel (BLC) 268
-1 Darksteel Citadel (C16) 288
+1 Collector's Vault (WOE) 244
+1 Cybermen Squadron (WHO) 781 *F*
+1 Darksteel Citadel (2XM) 315
+1 Darksteel Forge (HOP) 111
 1 Dread Statuary (CN2) 217
-1 Dreamstone Hedron (ARC) 105
 1 Dross Scorpion (MRD) 164
-1 Empowered Autogenerator (PLST) C19-54
-1 Everflowing Chalice (LTC) 278
-1 Extruder (MH2) 296
-1 Forsaken Monument (M3C) 293
+1 Excalibur, Sword of Eden (ACR) 256 *E*
+1 Forsaken Monument (CMM) 950
+1 Foundry Inspector (CMR) 310
 1 Gallifrey Council Chamber (WHO) 188
-1 Gilded Lotus (BLC) 271
-1 Grinding Station (MB2) 223
-1 Guildless Commons (PLST) CMR-351
+1 Guildless Commons (CMR) 351 *F*
 1 Hall of Tagsin (BRO) 263
-1 Heartstone (PLST) H09-26
-1 Hedron Archive (C19) 214
-1 Hexavus (BRC) 14
+1 Hedron Archive (JMP) 468
+1 Hedron Crawler (OGW) 164
 1 Hidden Grotto (BLB) 254
-1 Karn, the Great Creator (MB2) 3
-1 Krark-Clan Ironworks (MB2) 224
+1 High Market (2XM) 321
+1 Jhoira's Familiar (DOM) 220
+1 Karn, Legacy Reforged (MAT) 49 *F*
+1 Krark-Clan Ironworks (5DN) 134
 1 Kuldotha Forgemaster (SOM) 169
-1 Muraganda Raceway (PDFT) 257p
-1 Myr Galvanizer (SOM) 181
-1 Myr Moonvessel (DST) 133
-1 Myr Turbine (MBS) 117
-1 Mystic Forge (PIP) 236
+1 Manakin (IMA) 218
+1 Metalwork Colossus (KLD) 222
+1 Meteor Golem (CLB) 323
+1 Millikin (DMR) 231
+1 Mind Stone (DDP) 65
+1 Mind's Eye (BBD) 240
+1 Mindless Automaton (EXO) 135
+1 Mirrorworks (C18) 211
+1 Mishra's Self-Replicator (DOM) 223
+1 Muraganda Raceway (DFT) 257
+1 Myr Battlesphere (C18) 212
+1 Myr Enforcer (MM2) 224
+1 Mystic Forge (BRR) 36
 1 Nephalia Academy (EMN) 205
 1 Nesting Grounds (PIP) 276
-1 Palladium Myr (SOM) 190
-1 Pentavus (C14) 261
-1 Phyrexian Triniform (CMM) 969
-1 Prototype Portal (SOM) 195
-1 Reliquary Tower (TDC) 386
-1 Retrofitter Foundry (DRC) 136
-1 Rings of Brighthearth (CMR) 698
-1 Rogue's Passage (LCC) 349
-1 Ruins of Oran-Rief (M3C) 370
-1 Sculpting Steel (BRR) 50
-1 Sea Gate Wreckage (OGW) 177
-1 Shrine of the Forsaken Gods (MKC) 292
-1 Sisay's Ring (CMR) 340
-1 Sol Ring (TDC) 106
-1 Staff of Domination (5DN) 156
+1 Nettlecyst (MH2) 231
+1 Nim Deathmantle (2X2) 309
+1 Null Elemental Blast (MH3) 12
+1 Ornithopter of Paradise (MH2) 232
+1 Palladium Myr (IMA) 224
+1 Patchwork Gnomes (MH2) 299
+1 Perpetual Timepiece (OTC) 263
+1 Phyrexian Triniform (MOC) 370
+1 Reliquary Tower (CMM) 425 *F*
+1 Rogue's Passage (C19) 270
+1 Ruins of Oran-Rief (CMM) 1023
+1 Runaway Boulder (LCI) 259
+1 Sanitation Automaton (MKM) 256
+1 Scene of the Crime (MKM) 267 *F*
+1 Scrap Trawler (AER) 175
+1 Sea Gate Wreckage (CMM) 1028
+1 Selective Obliteration (M3C) 35
+1 Semblance Anvil (BRR) 115
+1 Sensei's Divining Top (2X2) 314
+1 Shrine of the Forsaken Gods (C19) 273
+1 Skullclamp (DST) 140
+1 Sojourner's Companion (MH2) 235
+1 Sol Ring (C18) 222
+1 Solemn Simulacrum (FDN) 257
+1 Soul of New Phyrexia (C16) 274
+1 Spare Supplies (ZNR) 254
+1 Staff of Domination (CMR) 343
+1 Stonespeaker Crystal (CLB) 338
 1 Stridehangar Automaton (DRC) 35
-1 Su-Chi Cave Guard (BRO) 249
-1 Syr Ginger, the Meal Ender (PWOE) 252p
-1 Tarrian's Soulcleaver (PLCI) 264p
-1 Tatterkite (SHM) 264
-1 Thopter Squadron (EXO) 140
-1 Thran Dynamo (CMM) 415
-1 Throne of Geth (SOM) 211
-1 Tomb of the Spirit Dragon (M3C) 397
-1 Traxos, Scourge of Kroog (BRC) 170
-1 Treasure Vault (DRC) 180
-1 Triskelavus (CMD) 263
-1 Triskelion (MRD) 269
-1 Tyrite Sanctum (DMC) 240
-1 Ugin's Nexus (KTK) 227
-1 Ur-Golem's Eye (DST) 155
-1 Urza's Cave (MH3) 234
+1 Thought Vessel (CMR) 703
+1 Thousand-Year Elixir (LRW) 263
+1 Threefold Thunderhulk (PLCI) 265p
+1 Tomb of the Spirit Dragon (KTK) 245
+1 Trading Post (M13) 220
+1 Transmutation Font (PW24) 11 *F*
+1 Tyrite Sanctum (KHM) 372 *F*
+1 Ugin, the Ineffable (WAR) 2
 1 Urza's Factory (TSR) 288
-1 Urza's Mine (J22) 829
-1 Urza's Power Plant (CHR) 115a
-1 Urza's Tower (J22) 831
-1 Voltaic Key (DDE) 17
-1 Walking Ballista (J22) 806
-5 Wastes (OGW) 184a
-1 Workhorse (EXO) 142
-1 Worn Powerstone (SCD) 288
+1 Urza's Mine (2XM) 329
+1 Urza's Power Plant (2XM) 330
+1 Urza's Tower (2XM) 331
+1 Wand of Vertebrae (GRN) 242
+5 Wastes (CMM) 1055
+1 Wurmcoil Engine (2XM) 308

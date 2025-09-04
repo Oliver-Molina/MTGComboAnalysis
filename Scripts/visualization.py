@@ -1,5 +1,5 @@
 from pyvis.network import Network
-from os import path
+from os import path, makedirs
 import json
 import math
 
@@ -38,6 +38,16 @@ def prepeare_mass(card, max_combos):
     return mass
 
 def main():
+    # Create directories
+    if not path.exists(analysis_directory):
+        makedirs(analysis_directory)
+
+    if not path.exists(combo_directory):
+        makedirs(combo_directory)
+
+    if not path.exists(output_directory):
+        makedirs(output_directory)
+
     combo_net = Network(height="100vh", width="100%", bgcolor="#222222", font_color="white")
     combo_net.barnes_hut()
 
@@ -52,7 +62,6 @@ def main():
 
     cardnames = list(adjaceny_list.keys())
     max_combos = max([len(card["current_combo_ids"]) for card in card_summaries.values()])
-    print(max_combos)
     for i, cardname in enumerate(cardnames):
         card = card_summaries[cardname]
         title = prepare_title(card)

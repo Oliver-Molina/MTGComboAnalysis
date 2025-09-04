@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
-from os import path
+from os import path, makedirs
 
 # External URLs
 url = "https://combo-finder.com/"
@@ -17,6 +17,13 @@ webpage_copy_filepath = path.join(output_directory, "webpage.html")
 
 
 def main():
+    # Create directories
+    if not path.exists(user_directory):
+        makedirs(user_directory)
+
+    if not path.exists(output_directory):
+        makedirs(output_directory)
+    
     # Read decklist file
     try:
         with open(decklist_filename, "r", encoding="utf-8") as file:

@@ -25,6 +25,7 @@ Combo results are visualized using a barnes hut network diagram with parameters 
 #### Quick Instructions
 * Navigate to the [UserInputtedFiles](UserInputtedFiles) directory and copy your decklist from any website such as [Moxfield](https://moxfield.com/) to [decklist.txt](UserInputtedFiles/decklist.txt)
 * You can also add the names of any cards you wish to ignore to file [antidecklist.txt](UserInputtedFiles/antidecklist.txt)
+* If you wish to display combos of only a certain colour combination add those colours to file [desiredColours.txt](UserInputtedFiles/desiredColours.txt)
 * Navigate to the [Scripts](Scripts) directory
 * Run [run.py](Scripts/run.py)
 ```
